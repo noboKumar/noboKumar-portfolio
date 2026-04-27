@@ -52,7 +52,7 @@ const Hero = () => {
             delaySpeed={1000}
           />
         </p>
-        <p className="w-2xl text-lg">{heroData.description}</p>
+        <p className="px-5 text-lg md:w-2xl">{heroData.description}</p>
         <div
           onContextMenu={(e) => {
             e.stopPropagation();
@@ -98,13 +98,10 @@ const Hero = () => {
         </div>
       </div>
       {/* avatar and icons */}
-      <div
-        className="relative flex items-center justify-center"
-        style={{ width: 400, height: 400 }}
-      >
+      <div className="relative flex h-[400px] w-[400px] items-center justify-center">
         {/* Orbital ring 1 - outer dashed purple */}
         <div
-          className="absolute rounded-full"
+          className="absolute hidden rounded-full md:block"
           style={{
             width: 470,
             height: 470,
@@ -117,7 +114,7 @@ const Hero = () => {
 
         {/* Orbital ring 2 - inner dashed cyan */}
         <div
-          className="absolute rounded-full"
+          className="absolute hidden rounded-full md:block"
           style={{
             width: 390,
             height: 390,
@@ -149,7 +146,7 @@ const Hero = () => {
 
         {/* Icons layer — your original float logic, repositioned around the ring */}
         <div
-          className="pointer-events-none absolute z-20"
+          className="pointer-events-none absolute z-20 hidden md:block"
           style={{
             width: 390,
             height: 390,

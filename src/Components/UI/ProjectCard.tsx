@@ -18,7 +18,7 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
           key={idx}
           spotlightSize={50}
           spotlightColor={"rgba(255, 255, 255, 0.08)"}
-          className="mx-auto flex max-w-7xl flex-col items-center gap-5 rounded-2xl shadow-xl lg:flex-row sticky"
+          className="sticky mx-auto flex max-w-7xl flex-col items-center gap-5 rounded-2xl shadow-xl lg:flex-row"
           style={{ top: `calc(20% + ${idx * 30}px)` }}
         >
           {/* img section */}
@@ -74,7 +74,9 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
                   <button
                     className="btn btn-outline border-gray-500/80"
                     onClick={() => {
-                      const modal = document.getElementById(`my_modal_${idx}`) as HTMLDialogElement | null;
+                      const modal = document.getElementById(
+                        `my_modal_${idx}`,
+                      ) as HTMLDialogElement | null;
                       modal?.showModal();
                     }}
                   >
