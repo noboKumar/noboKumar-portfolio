@@ -6,7 +6,7 @@ const techStackMultiple = [...techStack, ...techStack, ...techStack, ...techStac
 
 export default function TechGrid() {
   return (
-    <Marquee>
+    <Marquee speed={110}>
       <div className="flex flex-wrap justify-center gap-6 p-6">
         {techStackMultiple.map((tech, i) => {
           const Icon = tech.icon;
