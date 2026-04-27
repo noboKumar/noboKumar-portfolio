@@ -53,31 +53,41 @@ export default function PortfolioPage() {
   }, []);
 
   return (
-    <div 
-      onContextMenu={(e) => e.preventDefault()} 
+    <div
+      onContextMenu={(e) => e.preventDefault()}
       className="font bg-base-100 relative min-h-screen w-full"
       data-theme={theme}
     >
-      {/*Background Layer*/}
-      <div className="pointer-events-none absolute inset-0 z-0">
-        {/* Grid */}
+      {/*Background Layer - Fixed Blobs*/}
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+        {/* Deep Dark Blue Blob */}
+        <div className="absolute top-[-10%] left-[-10%] h-[800px] w-[800px] rounded-full bg-blue-900/30 blur-[150px]" />
+
+        {/* Dark Reddish Blob */}
+        <div className="absolute top-[30%] right-[-10%] h-[700px] w-[700px] rounded-full bg-red-900/20 blur-[120px]" />
+
+        {/* Glass Overlay */}
+        <div className="absolute inset-0 bg-base-100/10 backdrop-blur-[80px]" />
+      </div>
+
+      {/*Background Layer - Scrolling Grid*/}
+      <div className="pointer-events-none absolute inset-0 z-[1] overflow-hidden">
+        {/* Grid Pattern */}
         <div
           className={cn(
-            "absolute inset-0 opacity-40",
+            "absolute inset-0 opacity-[0.2]",
             "[background-size:40px_40px]",
             "[background-image:linear-gradient(to_right,#525252_1px,transparent_1px),linear-gradient(to_bottom,#525252_1px,transparent_1px)]",
-            "hidden lg:block [data-theme=dark]:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
+            "hidden lg:block [data-theme=dark]:[background-image:linear-gradient(to_right,#475569_1px,transparent_1px),linear-gradient(to_bottom,#475569_1px,transparent_1px)]",
           )}
         />
-        {/* Radial gradient for the container to give a faded look */}
-        <div className="bg-base-100 absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+
+        {/* Radial gradient mask for depth */}
+        <div className="absolute inset-0 bg-base-100/40 [mask-image:radial-gradient(ellipse_at_center,transparent_30%,black)]" />
       </div>
       {/*Foreground Content Layer*/}
       <div className="relative z-10 flex min-h-screen w-full flex-col">
         <NavBar theme={theme} setTheme={setTheme} />
-        <div className="fixed top-0 left-0 z-40 h-[50px] w-full">
-          <div className="bg-base-100 h-full w-full"></div>
-        </div>
         <Hero />
         <div data-aos="fade-up">
           <About />

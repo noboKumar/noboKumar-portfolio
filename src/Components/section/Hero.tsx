@@ -136,7 +136,7 @@ const Hero = () => {
         >
           <div className="z-10 mx-auto w-[350px] max-w-full p-5">
             <img
-              className="h-auto w-full cursor-pointer rounded-full border-8 border-gray-100/10 object-top grayscale-40 filter"
+              className="h-auto w-full cursor-pointer rounded-full border-8 border-gray-100/10 object-top grayscale-10 filter"
               src={(profileImg as any).src || profileImg}
               alt="Profile"
             />

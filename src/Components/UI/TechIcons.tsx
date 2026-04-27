@@ -14,7 +14,7 @@ export default function TechGrid() {
             <SpotlightCard
               key={i}
               spotlightColor="rgba(133, 133, 133, 0.562)"
-              className="group flex h-[140px] w-[120px] cursor-pointer flex-col items-center justify-center rounded-xl shadow-md transition-transform duration-700 ease-in-out hover:scale-110"
+              className="group flex h-[110px] w-[100px] md:h-[140px] md:w-[120px] cursor-pointer flex-col items-center justify-center rounded-xl shadow-md transition-transform duration-700 ease-in-out hover:scale-110"
             >
               <div className="transition-transform delay-100 duration-700 ease-in-out group-hover:scale-125">
                 <Icon color={tech.color} size={50} />
