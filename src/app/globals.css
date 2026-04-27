@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    light,
+    dark --default;
+}
+
+:root {
+  --color-primary: #000000;
+  --color-secondary: #444444;
+  --color-base-100: #dbdbdb;
+  --color-base-200: #f5f5f5;
+  --color-base-300: #e0e0e0;
+}
+
+[data-theme="dark"] {
+  --color-primary: #ffffff;
+  --color-secondary: #cccccc;
+  --color-base-100: #000000;
+  --color-base-200: #111111;
+  --color-base-300: #222222;
+  .btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+.active {
+  @apply bg-base-300;
+}
+
+.heading-font {
+  font-family: "DM Serif Display", serif;
+}
+
+.font {
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
