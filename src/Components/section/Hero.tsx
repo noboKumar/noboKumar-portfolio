@@ -8,11 +8,21 @@ import { BsTwitterX } from "react-icons/bs";
 import { FiSend } from "react-icons/fi";
 import { BsFolder2Open } from "react-icons/bs";
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiFirebase, SiExpress } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiFirebase,
+  SiExpress,
+  SiPostgresql,
+  SiTypescript,
+  SiNextdotjs,
+  SiPrisma,
+} from "react-icons/si";
 import { SiMongodb, SiJavascript } from "react-icons/si";
 import { Link } from "react-scroll";
 import { FiFileText } from "react-icons/fi";
 import { heroData } from "../../data/hero";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { TbBrandNextjs } from "react-icons/tb";
 
 const Hero = () => {
   return (
@@ -42,7 +52,7 @@ const Hero = () => {
             delaySpeed={1000}
           />
         </p>
-        <p className="text-lg">{heroData.description}</p>
+        <p className="w-2xl text-lg">{heroData.description}</p>
         <div
           onContextMenu={(e) => {
             e.stopPropagation();
@@ -88,27 +98,74 @@ const Hero = () => {
         </div>
       </div>
       {/* avatar and icons */}
-      <div className="relative">
-        {/* Avatar container */}
-        <div className="avatar relative z-10">
-          <div className="z-10 mx-auto w-[300px] max-w-full p-5 xl:w-[400px]">
+      <div
+        className="relative flex items-center justify-center"
+        style={{ width: 400, height: 400 }}
+      >
+        {/* Orbital ring 1 - outer dashed purple */}
+        <div
+          className="absolute rounded-full"
+          style={{
+            width: 470,
+            height: 470,
+            top: "50%",
+            left: "50%",
+            border: "1px dashed rgba(168,85,247,0.25)",
+            animation: "spin-outer 28s linear infinite",
+          }}
+        />
+
+        {/* Orbital ring 2 - inner dashed cyan */}
+        <div
+          className="absolute rounded-full"
+          style={{
+            width: 390,
+            height: 390,
+            top: "50%",
+            left: "50%",
+            border: "1px dashed rgba(6,182,212,0.2)",
+            animation: "spin-outer 20s linear infinite reverse",
+          }}
+        />
+
+        {/* Avatar — unchanged */}
+        <div
+          className="avatar absolute z-10"
+          style={{
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        >
+          <div className="z-10 mx-auto w-[350px] max-w-full p-5">
             <img
-              className="h-auto w-full cursor-pointer rounded-full border-8 border-gray-100/10 object-top grayscale-90 filter hover:grayscale-40"
+              className="h-auto w-full cursor-pointer rounded-full border-8 border-gray-100/10 object-top grayscale-40 filter"
               src={(profileImg as any).src || profileImg}
               alt="Profile"
             />
           </div>
-
-          {/* Glow Background */}
-          <div className="absolute inset-0 z-0 animate-pulse rounded-full bg-gradient-to-br from-blue-400/20 to-purple-600/20 blur-xl"></div>
+          <div className="absolute inset-0 z-0 animate-pulse rounded-full bg-gradient-to-br from-blue-400/20 to-purple-600/20 blur-xl" />
         </div>
 
-        {/* Icons layer */}
-        <div className="pointer-events-none absolute inset-0 z-20">
+        {/* Icons layer — your original float logic, repositioned around the ring */}
+        <div
+          className="pointer-events-none absolute z-20"
+          style={{
+            width: 390,
+            height: 390,
+            top: "50%",
+            left: "50%",
+            marginTop: -195,
+            marginLeft: -195,
+          }}
+        >
           {/* React - Top center */}
           <div
-            className="absolute top-2 left-1/2 -translate-x-1/2 animate-pulse"
+            className="absolute"
             style={{
+              top: -4,
+              left: "40%",
+              transform: "translateX(-50%)",
               animation: "float 3s ease-in-out infinite",
               animationDelay: "0s",
             }}
@@ -116,10 +173,12 @@ const Hero = () => {
             <FaReact className="text-4xl text-cyan-400 drop-shadow-lg md:text-5xl" />
           </div>
 
-          {/* Tailwind CSS - Top right */}
+          {/* Tailwind - Top right */}
           <div
-            className="absolute top-[25%] right-4"
+            className="absolute"
             style={{
+              top: "15%",
+              right: 30,
               animation: "float 3.5s ease-in-out infinite",
               animationDelay: "0.5s",
             }}
@@ -127,32 +186,40 @@ const Hero = () => {
             <SiTailwindcss className="text-4xl text-sky-400 drop-shadow-lg md:text-5xl" />
           </div>
 
-          {/* Firebase - Bottom right */}
+          {/* TypeScript - Right center */}
           <div
-            className="absolute top-6/10 left-2 -translate-y-1/2"
+            className="absolute"
             style={{
-              animation: "float 4s ease-in-out infinite",
-              animationDelay: "1s",
+              top: "50%",
+              right: -4,
+              transform: "translateY(-50%)",
+              animation: "float 3.7s ease-in-out infinite",
+              animationDelay: "3s",
             }}
           >
-            <SiFirebase className="text-3xl text-yellow-500 drop-shadow-lg md:text-4xl" />
+            <SiTypescript className="rounded-lg text-3xl text-blue-500 drop-shadow-lg md:text-4xl" />
           </div>
 
-          {/* Node.js - Bottom center */}
+          {/* Next.js - Bottom right */}
           <div
-            className="absolute bottom-10 left-8/10 -translate-x-1/2"
+            className="absolute"
             style={{
+              bottom: "10%",
+              right: 30,
               animation: "float 3.2s ease-in-out infinite",
               animationDelay: "1.5s",
             }}
           >
-            <FaNodeJs className="text-4xl text-green-600 drop-shadow-lg md:text-5xl" />
+            <TbBrandNextjs className="text-4xl text-white drop-shadow-lg md:text-5xl" />
           </div>
 
-          {/* Express - Bottom left */}
+          {/* Express - Bottom center */}
           <div
-            className="absolute bottom-[3%] left-30"
+            className="absolute"
             style={{
+              bottom: -4,
+              left: "45%",
+              transform: "translateX(-50%)",
               animation: "float 3.8s ease-in-out infinite",
               animationDelay: "2s",
             }}
@@ -160,28 +227,40 @@ const Hero = () => {
             <SiExpress className="text-3xl text-gray-400 drop-shadow-lg md:text-4xl" />
           </div>
 
-          {/* MongoDB - Top left */}
+          {/* PostgreSQL - Bottom left */}
           <div
-            className="absolute top-[20%] left-10"
+            className="absolute"
             style={{
+              bottom: "25%",
+              left: 10,
               animation: "float 3.3s ease-in-out infinite",
               animationDelay: "2.5s",
             }}
           >
-            <SiMongodb className="text-4xl text-green-600 drop-shadow-lg md:text-5xl" />
+            <BiLogoPostgresql className="text-4xl text-blue-500 drop-shadow-lg md:text-5xl" />
           </div>
 
-          {/* JavaScript - Left center */}
+          {/* Prisma - Left center */}
           <div
-            className="absolute -right-0 bottom-[40%]"
+            className="absolute"
             style={{
-              animation: "float 3.7s ease-in-out infinite",
-              animationDelay: "3s",
+              top: "20%",
+              left: 20,
+              transform: "translateY(-50%)",
+              animation: "float 4s ease-in-out infinite",
+              animationDelay: "1s",
             }}
           >
-            <SiJavascript className="rounded-lg text-3xl text-yellow-400 drop-shadow-lg md:text-4xl" />
+            <SiPrisma className="text-3xl text-white drop-shadow-lg md:text-4xl" />
           </div>
         </div>
+
+        <style>{`
+    @keyframes spin-outer {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to   { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+  `}</style>
       </div>
     </Container>
   );
