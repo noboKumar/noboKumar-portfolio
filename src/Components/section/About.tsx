@@ -3,7 +3,7 @@ import Heading from "../UI/Heading";
 import Container from "../UI/Container";
 import { aboutData } from "../../data/about";
 import carttoonImg from "../../assets/nobokumar-laptop.png";
-import TiltedCard from "../../../@/components/TiltedCard";
+import TiltedCard from "../UI/TiltedCard";
 
 const About = () => {
   return (

@@ -52,7 +52,7 @@ const Hero = () => {
             delaySpeed={1000}
           />
         </p>
-        <p className="px-5 text-lg md:w-2xl">{heroData.description}</p>
+        <p className="px-5 md:px-0 text-lg md:w-2xl">{heroData.description}</p>
         <div
           onContextMenu={(e) => {
             e.stopPropagation();
