@@ -6,7 +6,6 @@ export const heroData = {
     "MERN Stack Developer",
     "Full Stack Developer",
     "Web Developer",
-    "UI/UX Designer",
     "Tech Enthusiast",
   ],
   description:

@@ -62,7 +62,7 @@ const NavBar = ({ theme, setTheme }: NavBarProps) => {
         <a
           href="https://drive.google.com/uc?export=download&id=1g9NcDLC_h0j8CItZ3251ID0OVQxbzgQ0"
           download
-          className="btn btn-primary inline-flex items-center px-2 text-sm md:px-4"
+          className="btn btn-primary inline-flex items-center px-2 text-sm md:px-4  rounded-full"
         >
           <MdOutlineFileDownload size={20} />
           Resume

@@ -3,6 +3,7 @@ import Container from "../UI/Container";
 import Heading from "../UI/Heading";
 import ProjectCard from "../UI/ProjectCard";
 import { projectData } from "../../data/projects";
+import { TracingBeam } from "../UI/tracing-beam";
 
 const Projects = () => {
   return (
