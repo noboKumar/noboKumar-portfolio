@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import BlobCursor from "../Components/UI/BlobCursor";
+import ScrollToTop from "../Components/UI/ScrollToTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -50,7 +51,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        {/* <BlobCursor /> */}
+        <BlobCursor />
+        <ScrollToTop />
         {children}
       </body>
     </html>
