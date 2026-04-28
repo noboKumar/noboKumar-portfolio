@@ -98,8 +98,8 @@ const Hero = () => {
         </div>
       </div>
       {/* avatar and icons */}
-      <div className="relative flex h-[400px] w-[400px] items-center justify-center">
-        {/* Orbital ring 1 - outer dashed purple */}
+      <div className="relative flex h-[300px] w-[300px] md:h-[400px] md:w-[400px] items-center justify-center">
+        {/* Orbital ring 1*/}
         <div
           className="absolute hidden rounded-full md:block"
           style={{
@@ -112,7 +112,7 @@ const Hero = () => {
           }}
         />
 
-        {/* Orbital ring 2 - inner dashed cyan */}
+        {/* Orbital ring 2*/}
         <div
           className="absolute hidden rounded-full md:block"
           style={{
@@ -125,7 +125,7 @@ const Hero = () => {
           }}
         />
 
-        {/* Avatar — unchanged */}
+        {/* Avatar */}
         <div
           className="avatar absolute z-10"
           style={{
@@ -134,7 +134,7 @@ const Hero = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="z-10 mx-auto w-[350px] max-w-full p-5">
+          <div className="z-10 mx-auto w-[280px] md:w-[350px] max-w-full p-5">
             <img
               className="h-auto w-full cursor-pointer rounded-full border-8 border-gray-100/10 object-top grayscale-10 filter"
               src={(profileImg as any).src || profileImg}
@@ -144,7 +144,7 @@ const Hero = () => {
           <div className="absolute inset-0 z-0 animate-pulse rounded-full bg-gradient-to-br from-blue-400/20 to-purple-600/20 blur-xl" />
         </div>
 
-        {/* Icons layer — your original float logic, repositioned around the ring */}
+        {/* Icons layer */}
         <div
           className="pointer-events-none absolute z-20 hidden md:block"
           style={{
