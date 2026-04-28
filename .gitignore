@@ -17,6 +17,7 @@ dist-ssr
 .env.test.local
 .env.production.local
 .env
+out
 
 # Editor directories and files
 .vscode/*
@@ -30,3 +31,4 @@ dist-ssr
 *.sw?
 
 .vercel
+.env*.local
