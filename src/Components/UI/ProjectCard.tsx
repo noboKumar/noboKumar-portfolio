@@ -1,29 +1,57 @@
-import React from "react";
+import React, { useRef } from "react";
 import SpotlightCard from "./SpotlightCard";
 import { FaGithub } from "react-icons/fa";
 import { IoIosLink } from "react-icons/io";
 import { BsThreeDots } from "react-icons/bs";
 import Modal from "./Modal";
 import { Project } from "../../data/types";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 interface ProjectCardProps {
   projectData: Project[];
 }
 
-const ProjectCard = ({ projectData }: ProjectCardProps) => {
+const Card = ({
+  project,
+  idx,
+  progress,
+  range,
+  targetScale,
+}: {
+  project: Project;
+  idx: number;
+  progress: MotionValue<number>;
+  range: [number, number];
+  targetScale: number;
+}) => {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "start start"],
+  });
+
+  const scale = useTransform(progress, range, [1, targetScale]);
+
   return (
-    <div className="grid grid-cols-1 gap-10 py-8">
-      {projectData.map((project, idx) => (
+    <div
+      ref={container}
+      className="sticky top-0 flex h-screen items-start justify-center pt-10 md:pt-20"
+    >
+      <motion.div
+        style={{
+          scale,
+          top: `calc(10% + ${idx * 25}px)`,
+        }}
+        className="relative h-[500px] w-full origin-top"
+      >
         <SpotlightCard
-          key={idx}
           spotlightSize={50}
           spotlightColor={"rgba(255, 255, 255, 0.08)"}
-          className="sticky mx-auto flex max-w-7xl flex-col items-center gap-5 rounded-2xl shadow-xl lg:flex-row"
-          style={{ top: `calc(20% + ${idx * 30}px)` }}
+          className="mx-auto flex h-full max-w-7xl flex-col items-center gap-5 rounded-2xl shadow-2xl lg:flex-row"
         >
           {/* img section */}
-          <div className="max-h-[200px] w-full flex-1 overflow-y-auto md:max-h-[400px] md:p-5">
-            <div className="h-full">
+          <div className="h-[200px] w-full flex-1 overflow-hidden md:h-full md:p-5">
+            <div className="h-full w-full">
               <img
                 src={project.photo}
                 alt={project.title}
@@ -32,7 +60,7 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
             </div>
           </div>
           {/* text section */}
-          <div className="flex-1 space-y-5">
+          <div className="flex-1 space-y-5 p-6 md:p-0">
             <h3 className="text-xl font-semibold md:text-4xl">
               {project.title}
             </h3>
@@ -61,16 +89,14 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
                   >
                     <IoIosLink /> Live Link
                   </a>
-                  {link.githubRepo && (
-                    <a
-                      className="btn btn-primary"
-                      href={link.githubRepo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithub size={20} /> GitHub
-                    </a>
-                  )}
+                  <a
+                    className="btn btn-primary"
+                    href={link.githubRepo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub size={20} /> GitHub
+                  </a>
                   <button
                     className="btn btn-outline border-gray-500/80"
                     onClick={() => {
@@ -88,7 +114,33 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
           </div>
           <Modal id={`my_modal_${idx}`} project={project} />
         </SpotlightCard>
-      ))}
+      </motion.div>
+    </div>
+  );
+};
+
+const ProjectCard = ({ projectData }: ProjectCardProps) => {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
+
+  return (
+    <div ref={container} className="relative mt-0">
+      {projectData.map((project, idx) => {
+        const targetScale = 1 - (projectData.length - idx) * 0.05;
+        return (
+          <Card
+            key={idx}
+            project={project}
+            idx={idx}
+            progress={scrollYProgress}
+            range={[idx * (1 / projectData.length), 1]}
+            targetScale={targetScale}
+          />
+        );
+      })}
     </div>
   );
 };

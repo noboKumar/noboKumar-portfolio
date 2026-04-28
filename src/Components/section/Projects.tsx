@@ -6,7 +6,7 @@ import { projectData } from "../../data/projects";
 
 const Projects = () => {
   return (
-    <Container id={"projects"} className="my-20">
+    <Container id={"projects"} className="mt-10 mb-20">
       <Heading text={"Projects"}></Heading>
       <ProjectCard projectData={projectData}></ProjectCard>
     </Container>

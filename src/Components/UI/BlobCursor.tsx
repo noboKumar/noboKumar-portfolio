@@ -15,32 +15,17 @@ export default function BlobCursor() {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
     };
+
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
   }, [mouseX, mouseY]);
 
   return (
     <motion.div
-      style={{ x, y, translateX: "-50%", translateY: "-50%" }}
-      className="pointer-events-none fixed top-0 left-0 z-[9999]"
+      style={{ x, y }}
+      className="pointer-events-none fixed top-0 left-0 z-[9999] -translate-x-1/2 -translate-y-1/2"
     >
-      <motion.div
-        animate={{
-          borderRadius: [
-            "60% 40% 30% 70% / 60% 30% 70% 40%",
-            "30% 60% 70% 40% / 50% 60% 30% 60%",
-            "50% 60% 30% 60% / 30% 40% 70% 50%",
-            "40% 70% 60% 30% / 70% 50% 40% 60%",
-            "60% 40% 30% 70% / 60% 30% 70% 40%",
-          ],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="h-28 w-28 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 opacity-40 blur-2xl"
-      />
+      <div className="h-30 w-30 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 opacity-50 blur-3xl" />
     </motion.div>
   );
 }
