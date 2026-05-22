@@ -60,11 +60,17 @@ export default function PortfolioPage() {
     >
       {/*Background Layer - Fixed Blobs*/}
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-        {/* Deep Dark Blue Blob */}
-        <div className="absolute top-[-10%] left-[-10%] h-[800px] w-[800px] rounded-full bg-blue-900/30 blur-[150px]" />
+        {/* Deep Dark/Light Blue Blob */}
+        <div className={cn(
+          "absolute top-[-10%] left-[-10%] h-[800px] w-[800px] rounded-full blur-[150px] transition-colors duration-500",
+          theme === "light" ? "bg-indigo-100/60" : "bg-blue-900/30"
+        )} />
 
-        {/* Dark Reddish Blob */}
-        <div className="absolute top-[30%] right-[-10%] h-[700px] w-[700px] rounded-full bg-red-900/20 blur-[120px]" />
+        {/* Dark/Light Reddish Blob */}
+        <div className={cn(
+          "absolute top-[30%] right-[-10%] h-[700px] w-[700px] rounded-full blur-[120px] transition-colors duration-500",
+          theme === "light" ? "bg-pink-100/50" : "bg-red-900/20"
+        )} />
 
         {/* Glass Overlay */}
         <div className="absolute inset-0 bg-base-100/10 backdrop-blur-[80px]" />
@@ -74,12 +80,12 @@ export default function PortfolioPage() {
       <div className="pointer-events-none absolute inset-0 z-[1] overflow-hidden">
         {/* Grid Pattern */}
         <div
-          className={cn(
-            "absolute inset-0 opacity-[0.2]",
-            "[background-size:40px_40px]",
-            "[background-image:linear-gradient(to_right,#525252_1px,transparent_1px),linear-gradient(to_bottom,#525252_1px,transparent_1px)]",
-            "hidden lg:block [data-theme=dark]:[background-image:linear-gradient(to_right,#475569_1px,transparent_1px),linear-gradient(to_bottom,#475569_1px,transparent_1px)]",
-          )}
+          className="absolute inset-0 opacity-[0.2] [background-size:40px_40px] hidden lg:block"
+          style={{
+            backgroundImage: theme === "light"
+              ? "linear-gradient(to right, #cbd5e1 1px, transparent 1px), linear-gradient(to bottom, #cbd5e1 1px, transparent 1px)"
+              : "linear-gradient(to right, #475569 1px, transparent 1px), linear-gradient(to bottom, #475569 1px, transparent 1px)"
+          }}
         />
 
         {/* Radial gradient mask for depth */}
@@ -88,21 +94,21 @@ export default function PortfolioPage() {
       {/*Foreground Content Layer*/}
       <div className="relative z-10 flex min-h-screen w-full flex-col">
         <NavBar theme={theme} setTheme={setTheme} />
-        <Hero />
+        <Hero theme={theme} />
         <div data-aos="fade-up">
-          <About />
+          <About theme={theme} />
         </div>
         <div data-aos="fade-up">
-          <Skills />
+          <Skills theme={theme} />
         </div>
         <div data-aos="fade-up">
           <Education />
         </div>
         <div data-aos="fade-up">
-          <Projects />
+          <Projects theme={theme} />
         </div>
         <div data-aos="fade-up">
-          <Contact />
+          <Contact theme={theme} />
         </div>
         <Footer />
       </div>

@@ -24,7 +24,13 @@ import { heroData } from "../../data/hero";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
 
-const Hero = () => {
+import { cn } from "../../lib/utils";
+
+interface HeroProps {
+  theme?: string;
+}
+
+const Hero = ({ theme }: HeroProps) => {
   return (
     <Container
       id={"hero"}
@@ -207,7 +213,10 @@ const Hero = () => {
               animationDelay: "1.5s",
             }}
           >
-            <TbBrandNextjs className="text-4xl text-white drop-shadow-lg md:text-5xl" />
+            <TbBrandNextjs className={cn(
+              "text-4xl drop-shadow-lg md:text-5xl",
+              theme === "light" ? "text-slate-950" : "text-white"
+            )} />
           </div>
 
           {/* Express - Bottom center */}
@@ -221,7 +230,10 @@ const Hero = () => {
               animationDelay: "2s",
             }}
           >
-            <SiExpress className="text-3xl text-gray-400 drop-shadow-lg md:text-4xl" />
+            <SiExpress className={cn(
+              "text-3xl drop-shadow-lg md:text-4xl",
+              theme === "light" ? "text-slate-950" : "text-gray-400"
+            )} />
           </div>
 
           {/* PostgreSQL - Bottom left */}
@@ -248,7 +260,10 @@ const Hero = () => {
               animationDelay: "1s",
             }}
           >
-            <SiPrisma className="text-3xl text-white drop-shadow-lg md:text-4xl" />
+            <SiPrisma className={cn(
+              "text-3xl drop-shadow-lg md:text-4xl",
+              theme === "light" ? "text-slate-950" : "text-white"
+            )} />
           </div>
         </div>
 

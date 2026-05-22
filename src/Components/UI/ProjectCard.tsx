@@ -10,6 +10,7 @@ import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 interface ProjectCardProps {
   projectData: Project[];
+  theme?: string;
 }
 
 const Card = ({
@@ -18,12 +19,14 @@ const Card = ({
   progress,
   range,
   targetScale,
+  theme,
 }: {
   project: Project;
   idx: number;
   progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
+  theme?: string;
 }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -47,7 +50,7 @@ const Card = ({
       >
         <SpotlightCard
           spotlightSize={50}
-          spotlightColor={"rgba(255, 255, 255, 0.08)"}
+          spotlightColor={theme === "light" ? "rgba(99, 102, 241, 0.06)" : "rgba(255, 255, 255, 0.08)"}
           className="mx-auto flex h-full max-w-7xl flex-col items-center gap-5 rounded-2xl shadow-2xl lg:flex-row"
         >
           {/* img section */}
@@ -99,7 +102,7 @@ const Card = ({
                     <FaGithub size={20} /> GitHub
                   </a>
                   <button
-                    className="btn btn-outline border-gray-500/80"
+                    className={`btn btn-outline ${theme === "light" ? "border-slate-300/80" : "border-gray-500/80"}`}
                     onClick={() => {
                       const modal = document.getElementById(
                         `my_modal_${idx}`,
@@ -120,7 +123,7 @@ const Card = ({
   );
 };
 
-const ProjectCard = ({ projectData }: ProjectCardProps) => {
+const ProjectCard = ({ projectData, theme }: ProjectCardProps) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -139,6 +142,7 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
             progress={scrollYProgress}
             range={[idx * (1 / projectData.length), 1]}
             targetScale={targetScale}
+            theme={theme}
           />
         );
       })}

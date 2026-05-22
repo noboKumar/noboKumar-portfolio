@@ -4,8 +4,13 @@ import Container from "../UI/Container";
 import { aboutData } from "../../data/about";
 import carttoonImg from "../../assets/nobokumar-laptop.png";
 import TiltedCard from "../UI/TiltedCard";
+import { cn } from "../../lib/utils";
 
-const About = () => {
+interface AboutProps {
+  theme?: string;
+}
+
+const About = ({ theme }: AboutProps) => {
   return (
     <Container id="about" className="mt-20">
       <Heading text={aboutData.title} />
@@ -112,12 +117,13 @@ const About = () => {
             ].map(({ label, value }) => (
               <div
                 key={label}
-                className="rounded-xl px-4 py-3 text-center"
-                style={{
-                  background: "rgba(15,23,42,0.6)",
-                  border: "1px solid rgba(148,163,184,0.1)",
-                  minWidth: 90,
-                }}
+                className={cn(
+                  "rounded-xl px-4 py-3 text-center border transition-all duration-300",
+                  theme === "light"
+                    ? "bg-slate-100/80 border-slate-200/60"
+                    : "bg-slate-900/60 border-slate-800/40"
+                )}
+                style={{ minWidth: 90 }}
               >
                 <p
                   className="text-lg font-bold"

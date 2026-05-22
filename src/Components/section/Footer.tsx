@@ -5,7 +5,7 @@ import { heroData } from "../../data/hero";
 
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal footer-center text-base-content bg-base-200 gap-5 border-t border-gray-500/80 p-4">
+    <footer className="footer sm:footer-horizontal footer-center text-base-content bg-base-200 gap-5 border-t border-base-content/10 p-4">
       <aside>
         <p>
           Copyright © {new Date().getFullYear()} - All right reserved by

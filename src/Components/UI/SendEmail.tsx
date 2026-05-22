@@ -50,7 +50,7 @@ const SendEmail = () => {
           type="text"
           name="user_name"
           required
-          className="focus:ring-primary w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:outline-none"
+          className="focus:ring-primary w-full rounded-lg border border-base-content/20 px-4 py-2 focus:ring-2 focus:outline-none"
         />
       </div>
 
@@ -60,7 +60,7 @@ const SendEmail = () => {
           type="email"
           name="user_email"
           required
-          className="focus:ring-primary w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:outline-none"
+          className="focus:ring-primary w-full rounded-lg border border-base-content/20 px-4 py-2 focus:ring-2 focus:outline-none"
         />
       </div>
 
@@ -70,7 +70,7 @@ const SendEmail = () => {
           name="message"
           rows={5}
           required
-          className="focus:ring-primary w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:outline-none"
+          className="focus:ring-primary w-full rounded-lg border border-base-content/20 px-4 py-2 focus:ring-2 focus:outline-none"
         />
       </div>
 
