@@ -62,8 +62,9 @@ const NavBar = ({ theme, setTheme }: NavBarProps) => {
         <ToggleTheme theme={theme} setTheme={setTheme}></ToggleTheme>
         <a
           href={heroData.resume}
-          download
-          className="btn btn-primary inline-flex items-center px-2 text-sm md:px-4  rounded-full"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn bg-primary text-base-100 gap-2 rounded-3xl"
         >
           <MdOutlineFileDownload size={20} />
           Resume

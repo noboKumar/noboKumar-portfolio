@@ -77,15 +77,20 @@ const Hero = ({ theme }: HeroProps) => {
         </div>
 
         <div className="flex justify-center gap-5 md:justify-start">
-          <a
-            href={heroData.resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn bg-primary text-base-100 gap-2 rounded-3xl"
+          <Link
+            to="contacts"
+            smooth={true}
+            duration={500}
+            offset={-200}
+            spy={true}
+            isDynamic={true}
+            activeClass="active"
           >
-            <FiFileText className="text-lg" />
-            Resume
-          </a>
+            <button className="btn bg-primary text-base-100 gap-2 rounded-3xl cursor-pointer">
+              <FiSend className="text-lg" />
+              Let's Talk
+            </button>
+          </Link>
 
           <Link
             to="projects"
@@ -96,7 +101,7 @@ const Hero = ({ theme }: HeroProps) => {
             isDynamic={true}
             activeClass="active"
           >
-            <button className="btn text-primary border-primary gap-2 rounded-3xl border-2">
+            <button className="btn text-primary border-primary gap-2 rounded-3xl border-2 cursor-pointer">
               <BsFolder2Open className="text-lg" />
               View Projects
             </button>
