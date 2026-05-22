@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { IoIosLink } from "react-icons/io";
 import { BsThreeDots } from "react-icons/bs";
 import Modal from "./Modal";
+import ProjectImageSlider from "./ProjectImageSlider";
 import { Project } from "../../data/types";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
@@ -50,14 +51,13 @@ const Card = ({
           className="mx-auto flex h-full max-w-7xl flex-col items-center gap-5 rounded-2xl shadow-2xl lg:flex-row"
         >
           {/* img section */}
-          <div className="h-[200px] w-full flex-1 overflow-hidden md:h-full md:p-5">
-            <div className="h-full w-full">
-              <img
-                src={project.photo}
-                alt={project.title}
-                className="h-full w-full rounded-2xl object-cover object-top"
-              />
-            </div>
+          <div className="w-full lg:w-[480px] xl:w-[520px] shrink-0 md:p-5">
+            <ProjectImageSlider
+              photos={project.photos}
+              photoLabels={project.photoLabels}
+              title={project.title}
+              fallbackPhoto={project.photo}
+            />
           </div>
           {/* text section */}
           <div className="flex-1 space-y-5 p-6 md:p-0">

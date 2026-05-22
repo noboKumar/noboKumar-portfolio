@@ -14,6 +14,8 @@ export interface ProjectLink {
 export interface Project {
   title: string;
   photo: string;
+  photos?: string[];
+  photoLabels?: string[];
   description: string;
   techStack: TechItem[];
   links: ProjectLink[];
