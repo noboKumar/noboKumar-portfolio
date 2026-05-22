@@ -1,12 +1,21 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { emailConfig } from "../../data/config";
+import { toast } from "sonner";
 
 const SendEmail = () => {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    console.log("EmailJS Config:", {
+      serviceId: emailConfig.serviceId,
+      templateId: emailConfig.templateId,
+      publicKey: emailConfig.publicKey,
+    });
+  }, []);
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,10 +36,10 @@ const SendEmail = () => {
 
       console.log("SUCCESS!");
       form.current.reset();
-      alert("Message sent successfully!");
+      toast.success("Message sent successfully!");
     } catch (error: any) {
       console.log("FAILED...", error?.text || error);
-      alert("Failed to send message.");
+      toast.error("Failed to send message!");
     } finally {
       setLoading(false);
     }

@@ -6,6 +6,7 @@ import ToggleTheme from "./ToggleTheme";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-scroll";
 import { navLinks } from "../../data/navigation";
+import { heroData } from "../../data/hero";
 
 interface NavBarProps {
   theme: string;
@@ -60,7 +61,7 @@ const NavBar = ({ theme, setTheme }: NavBarProps) => {
       <div className="navbar-end gap-5">
         <ToggleTheme theme={theme} setTheme={setTheme}></ToggleTheme>
         <a
-          href="https://drive.google.com/uc?export=download&id=1g9NcDLC_h0j8CItZ3251ID0OVQxbzgQ0"
+          href={heroData.resume}
           download
           className="btn btn-primary inline-flex items-center px-2 text-sm md:px-4  rounded-full"
         >

@@ -14,5 +14,5 @@ export const heroData = {
   linkedin: "https://www.linkedin.com/in/nobo-kumar/",
   twitter: "https://x.com/noboKumar227",
   resume:
-    "https://drive.google.com/file/d/1AoWdDFq6i-iUkKJiBYDLs2gBaRy9B0kv/view?usp=sharing",
+    "https://drive.google.com/file/d/1g9NcDLC_h0j8CItZ3251ID0OVQxbzgQ0/view?usp=sharing",
 };
