@@ -20,8 +20,8 @@ export default function ProjectImageSlider({
 }: ProjectImageSliderProps) {
   // Use fallbacks if photos are empty
   const listPhotos = photos.length > 0 ? photos : [fallbackPhoto];
-  const listLabels = photoLabels.length > 0 
-    ? photoLabels 
+  const listLabels = photoLabels.length > 0
+    ? photoLabels
     : listPhotos.map((_, i) => `Page ${i + 1}`);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -89,11 +89,10 @@ export default function ProjectImageSlider({
               <button
                 key={idx}
                 onClick={() => handleTabClick(idx)}
-                className={`relative flex items-center gap-2 h-9 px-4 text-xs font-medium rounded-t-lg transition-all duration-300 cursor-pointer shrink-0 border-t border-x ${
-                  isActive
+                className={`relative flex items-center gap-2 h-9 px-4 text-xs font-medium rounded-t-lg transition-all duration-300 cursor-pointer shrink-0 border-t border-x ${isActive
                     ? "bg-[#0f0f11] text-white border-gray-800 border-b-[#0f0f11] z-10"
                     : "bg-[#18181c]/50 text-gray-500 border-transparent hover:bg-[#18181c] hover:text-gray-300"
-                }`}
+                  }`}
               >
                 <Globe size={11} className={isActive ? "text-indigo-400" : "text-gray-600"} />
                 <span className="max-w-[120px] truncate">{label}</span>
@@ -181,11 +180,10 @@ export default function ProjectImageSlider({
               <button
                 key={i}
                 onClick={() => handleTabClick(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                  i === currentIndex
+                className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${i === currentIndex
                     ? "bg-indigo-500 scale-125"
                     : "bg-gray-500 hover:bg-gray-300"
-                }`}
+                  }`}
                 aria-label={`Go to slide ${i + 1}`}
               />
             ))}
