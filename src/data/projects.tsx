@@ -46,7 +46,7 @@ export const projectData: Project[] = [
     ],
     links: [
       {
-        live: "https://skill-sparkx.netlify.app/",
+        live: "https://skill-sparkx.netlify.app",
         githubRepo: "https://github.com/noboKumar/Skill-Spark-Client",
       },
     ],

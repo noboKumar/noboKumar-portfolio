@@ -57,6 +57,7 @@ const Card = ({
               photoLabels={project.photoLabels}
               title={project.title}
               fallbackPhoto={project.photo}
+              liveUrl={project.links?.[0]?.live}
             />
           </div>
           {/* text section */}

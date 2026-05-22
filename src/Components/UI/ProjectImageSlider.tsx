@@ -8,6 +8,7 @@ interface ProjectImageSliderProps {
   photoLabels?: string[];
   title: string;
   fallbackPhoto: string;
+  liveUrl?: string;
 }
 
 export default function ProjectImageSlider({
@@ -15,6 +16,7 @@ export default function ProjectImageSlider({
   photoLabels = [],
   title,
   fallbackPhoto,
+  liveUrl,
 }: ProjectImageSliderProps) {
   // Use fallbacks if photos are empty
   const listPhotos = photos.length > 0 ? photos : [fallbackPhoto];
@@ -25,20 +27,14 @@ export default function ProjectImageSlider({
   const [currentIndex, setCurrentIndex] = useState(0);
   const total = listPhotos.length;
 
-  // Generate a beautiful mock URL slug
+  // Use real live URL from project data, fallback to generated slug
   const domainSlug = title
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
 
-  const currentLabelSlug = listLabels[currentIndex]
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
-
-  const mockUrl = `https://www.${domainSlug}.com/${currentLabelSlug}`;
+  const displayUrl = liveUrl ?? `https://www.${domainSlug}.com`;
 
   const handleNext = () => {
     setCurrentIndex((currentIndex + 1) % total);
@@ -68,7 +64,7 @@ export default function ProjectImageSlider({
             <div className="flex items-center gap-1.5 bg-[#0f0f11] text-gray-400 text-xs px-4 py-1.5 rounded-lg w-[260px] shrink-0 border border-gray-800/50">
               <Lock size={12} className="text-green-500 shrink-0" />
               <span className="truncate select-none w-full text-left">
-                https://www.{domainSlug}.com
+                {displayUrl}
               </span>
             </div>
           </div>
@@ -159,7 +155,7 @@ export default function ProjectImageSlider({
           <div className="flex items-center gap-2 bg-[#0f0f11] text-gray-400 text-xs px-4 py-1.5 rounded-lg w-[260px] shrink-0 border border-gray-800/50">
             <Lock size={12} className="text-green-500 shrink-0" />
             <span className="truncate text-gray-300 font-mono tracking-wide w-full text-left">
-              {mockUrl}
+              {displayUrl}
             </span>
           </div>
         </div>
