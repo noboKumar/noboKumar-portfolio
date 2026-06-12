@@ -99,7 +99,7 @@ export const projectData: Project[] = [
       "https://i.ibb.co/TM80dbK8/25f2999b-dfb4-4eeb-a69c-616c6c199428.png",
       "https://i.ibb.co/tMrFTMJY/e30fb160-e083-4b75-a228-f279f2a2c885.png"
     ],
-    photoLabels: ["Home", "Project Details", "Manage Projects"],
+    photoLabels: ["Home", "Project Details", "About"],
     description:
       "DevShowcase is a modern developer project showcase platform built with Next.js App Router and TypeScript. It enables developers to professionally present their projects, explore community submissions, and manage project listings through a clean, responsive, and user-friendly interface.",
     techStack: [
@@ -209,7 +209,7 @@ export const projectData: Project[] = [
     ],
     photoLabels: ["Home", "Rooms", "Rooms Details"],
     description:
-      "TraVoa is a modern, full-featured Hotel Booking Platform built using the MERN stack with secure authentication and dynamic features. It offers users a seamless experience for discovering and booking hotel rooms, submitting reviews, and managing their bookings. The platform is mobile-responsive, secure, and designed to be both functional and visually appealing for users and recruiters.",
+      "TraVoa is a modern, full-featured Hotel Booking Platform built using the MERN stack with secure authentication and dynamic features. It offers users a seamless experience for discovering and booking hotel rooms, submitting reviews, and managing their bookings. The platform is mobile-responsive, secure.",
     techStack: [
       { name: "React", icon: <FaReact className="text-[#61DBFB]" /> },
       {

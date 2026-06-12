@@ -32,7 +32,7 @@ const Skills = ({ theme }: SkillsProps) => {
           "max-w-lg mx-auto text-sm md:text-base",
           theme === "light" ? "text-slate-500" : "text-gray-500"
         )}>
-          Technologies I use to bring ideas to life — from pixel-perfect
+          Technologies I use to bring ideas to life from pixel-perfect
           frontends to scalable backend systems.
         </p>
       </div>

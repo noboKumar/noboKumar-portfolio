@@ -13,6 +13,7 @@ import {
   SiNetlify,
   SiVercel,
   SiJsonwebtokens,
+  SiBetterauth,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { IconType } from "react-icons";
@@ -61,7 +62,7 @@ export const skillDetailsMap: Record<string, SkillDetail> = {
   "Firebase Auth": { icon: SiFirebase, color: "#FFCA28", label: "Firebase Auth" },
   Prisma: { icon: SiPrisma, color: "#5a67d8", label: "Prisma" },
   JWT: { icon: SiJsonwebtokens, color: "#D63AFF", label: "JWT" },
-  "Better Auth": { icon: FaLock, color: "#10B981", label: "Better Auth" },
+  "Better Auth": { icon: SiBetterauth, color: "#ffffffff", label: "Better Auth" },
   MongoDB: { icon: SiMongodb, color: "#47A248", label: "MongoDB" },
   PostgreSQL: { icon: SiPostgresql, color: "#336791", label: "PostgreSQL" },
   Git: { icon: FaGitAlt, color: "#F05032", label: "Git" },
