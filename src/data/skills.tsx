@@ -31,6 +31,7 @@ export const techStack: SkillItem[] = [
   { icon: SiShadcnui, color: "#FFFFFF", label: "shadcn/ui" },
   { icon: FaNodeJs, color: "#339933", label: "Node.js" },
   { icon: SiExpress, color: "#FFFFFF", label: "Express.js" },
+  { icon: SiBetterauth, color: "#ffffffff", label: "BetterAuth" },
   { icon: SiFirebase, color: "#FFCA28", label: "Firebase" },
   { icon: SiPrisma, color: "#5a67d8", label: "Prisma" },
   { icon: SiMongodb, color: "#47A248", label: "MongoDB" },
