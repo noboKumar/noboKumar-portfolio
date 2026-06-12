@@ -1,9 +1,10 @@
 import React from "react";
 import { FaReact, FaKey } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiDaisyui, SiFirebase, SiMongodb, SiExpress, SiNextdotjs, SiTypescript, SiShadcnui, SiFramer, SiNodedotjs, SiGooglegemini, SiPostgresql, SiPrisma } from "react-icons/si";
+import { SiDaisyui, SiFirebase, SiMongodb, SiExpress, SiNextdotjs, SiTypescript, SiShadcnui, SiFramer, SiNodedotjs, SiGooglegemini, SiPostgresql, SiPrisma, SiAuth0 } from "react-icons/si";
 import { SiReactrouter } from "react-icons/si";
 import { FaStripe } from "react-icons/fa";
+import { SiBetterauth } from "react-icons/si";
 import { SiAxios, SiReactquery, SiReacthookform } from "react-icons/si";
 import { Project } from "./types";
 
@@ -91,6 +92,59 @@ export const projectData: Project[] = [
     ],
   },
   {
+    title: "DevShowcase - Developer Project Showcase Platform",
+    photo: "https://i.ibb.co/zTrwrGnF/2925f1a9-87cb-4cf6-8450-0417e7f318ac.png",
+    photos: [
+      "https://i.ibb.co/zTrwrGnF/2925f1a9-87cb-4cf6-8450-0417e7f318ac.png",
+      "https://i.ibb.co/TM80dbK8/25f2999b-dfb4-4eeb-a69c-616c6c199428.png",
+      "https://i.ibb.co/tMrFTMJY/e30fb160-e083-4b75-a228-f279f2a2c885.png"
+    ],
+    photoLabels: ["Home", "Project Details", "Manage Projects"],
+    description:
+      "DevShowcase is a modern developer project showcase platform built with Next.js App Router and TypeScript. It enables developers to professionally present their projects, explore community submissions, and manage project listings through a clean, responsive, and user-friendly interface.",
+    techStack: [
+      { name: "Next.js", icon: <SiNextdotjs className="text-base-content" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
+      {
+        name: "TailwindCSS",
+        icon: <RiTailwindCssFill className="text-[#38BDF8]" />,
+      },
+      { name: "shadcn/ui", icon: <SiShadcnui className="text-base-content" /> },
+      {
+        name: "PostgreSQL",
+        icon: <SiPostgresql className="text-[#336791]" />,
+      },
+      {
+        name: "Prisma",
+        icon: <SiPrisma className="text-base-content" />,
+      },
+      {
+        name: "Express.js",
+        icon: <SiExpress className="text-base-content" />,
+      },
+      {
+        name: "Better Auth",
+        icon: <SiBetterauth className="text-base-content" />,
+      },
+    ],
+    links: [
+      {
+        live: "https://dev-show-case-phi.vercel.app/",
+        githubRepo: "https://github.com/noboKumar/DevShowcase-Client",
+      },
+    ],
+    features: [
+      "Explore featured developer projects with search and advanced filtering by category and technology stack",
+      "Dynamic project details pages built using Next.js App Router with related project recommendations",
+      "Add new projects through a responsive submission form with validation and success feedback",
+      "Manage submitted projects with instant deletion and an intuitive dashboard layout",
+      "Fully responsive design with Light/Dark mode support for an enhanced user experience across devices",
+      "Built with reusable components, modern architecture, and a protected route-ready structure for future scalability",
+      "Interactive landing page featuring testimonials, community statistics, featured projects, and clear call-to-action sections",
+      "Smooth UI interactions with hover effects, transitions, and consistent design patterns using shadcn/ui",
+    ],
+  },
+  {
     title: "Skill Spark",
     photo: "https://i.ibb.co/yFG2nWs5/skill-spark-ss.png",
     photos: [
@@ -173,7 +227,7 @@ export const projectData: Project[] = [
     ],
     links: [
       {
-        live: "https://travoa.netlify.app/",
+        live: "https://travoa.netlify.app",
         githubRepo:
           "https://github.com/noboKumar/TraVoa-hotel-Booking-Platform-Client",
       },
@@ -190,81 +244,5 @@ export const projectData: Project[] = [
       "Custom 404 with Lottie react and redirect button",
     ],
   },
-  {
-    title: "Event Voyage - A Local Event Discovery PlatForm",
-    photo: "https://i.ibb.co/S4RnwRNN/event-Voyage-page.png",
-    photos: [
-      "https://i.ibb.co/nqM1pBZq/e74be36c-edca-40a7-a1cf-5c8404530fa5.png",
-      "https://i.ibb.co/hRLw3x91/f761b9d1-d300-435b-a131-9542b870d422.png",
-      "https://i.ibb.co/5hv3wzMn/07d9d11b-b5bb-458c-a242-49e0d4e2055d.png"
-    ],
-    photoLabels: ["Home", "My Bookings", "My Profile"],
-    description:
-      "Event Explorer is a web application designed to help users discover, explore, and get detailed information about upcoming local events like conferences, workshops, sports events, art exhibitions, and more. Users can log in, browse events, view detailed info and reserve Seat.",
-    techStack: [
-      { name: "React", icon: <FaReact className="text-[#61DBFB]" /> },
-      {
-        name: "TailwindCSS",
-        icon: <RiTailwindCssFill className="text-[#38BDF8]" />,
-      },
-      { name: "DaisyUI", icon: <SiDaisyui className="text-[#f9b779]" /> },
-      {
-        name: "React Router",
-        icon: <SiReactrouter className="text-red-600" />,
-      },
-      { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
-    ],
-    links: [
-      {
-        live: "https://event-voyage.netlify.app/",
-        githubRepo: "https://github.com/noboKumar/Event-Voyage",
-      },
-    ],
-    features: [
-      "Browse and discover local events.",
-      "Upcoming Event discovery.",
-      "View Event Details.",
-      "User Can Reserve seat for any Event.",
-      "User authentication and login system.",
-      "Responsive design for mobile and desktop.",
-    ],
-  },
-  {
-    title: "Doc Talk",
-    photo: "https://i.ibb.co/4wdr21Hf/doc-Talk-page.png",
-    photos: [
-      "https://i.ibb.co/wrZ13d1f/1eae2388-f87d-4ae5-a9db-08d4d73e1664.png",
-      "https://i.ibb.co/8nZq4Pmp/17e03479-ea5d-4cbd-a5fd-add8bbf9e357.png",
-      "https://i.ibb.co/ZzQYvMTY/ee5be85c-87f1-4ea9-b568-4c4e55ff2955.png"
-    ],
-    photoLabels: ["Home", "My Bookings", "Blogs"],
-    description:
-      "Doc Talk is designed to simplify the process of finding doctors, viewing their details, and booking appointments—all powered by dynamic JSON data. Users can view a list of available doctors, check details for each doctor, and book appointments if slots are available. The app prevents double-booking, allows users to view their bookings with insightful charts, and provides the ability to cancel bookings easily.",
-    techStack: [
-      { name: "React", icon: <FaReact className="text-[#61DBFB]" /> },
-      {
-        name: "TailwindCSS",
-        icon: <RiTailwindCssFill className="text-[#38BDF8]" />,
-      },
-      { name: "DaisyUI", icon: <SiDaisyui className="text-[#f9b779]" /> },
-      {
-        name: "React Router",
-        icon: <SiReactrouter className="text-red-600" />,
-      },
-    ],
-    links: [
-      {
-        live: "https://doc-talk-nk.netlify.app/",
-        githubRepo: "https://github.com/noboKumar/Doc-Talk",
-      },
-    ],
-    features: [
-      " Browse doctors from live JSON data",
-      "Book available doctors (prevents double-booking)",
-      "Detailed doctor information view",
-      " See all your bookings with visual charts",
-      "Cancel your bookings anytime",
-      "Clean, modern, and responsive UI",
-    ],
-  },
+
 ];

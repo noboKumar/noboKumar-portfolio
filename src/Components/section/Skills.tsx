@@ -50,10 +50,10 @@ const Skills = ({ theme }: SkillsProps) => {
             <div
               key={idx}
               className={cn(
-                "group relative rounded-2xl border p-6 transition-all duration-500",
+                "group relative rounded-2xl border p-6 transition-all duration-500 backdrop-blur-md",
                 theme === "light"
-                  ? "border-slate-200/80 bg-white/60 hover:border-slate-300 hover:shadow-lg"
-                  : "border-gray-800/50 bg-base-200/30 hover:border-gray-700/70"
+                  ? "border-slate-200/60 bg-white/40 hover:border-slate-300 hover:bg-white/60 hover:shadow-lg hover:shadow-indigo-500/5"
+                  : "border-white/10 bg-base-200/20 hover:border-indigo-500/30 hover:bg-base-200/40 hover:shadow-2xl hover:shadow-indigo-500/5"
               )}
             >
               {/* Hover gradient shimmer */}
