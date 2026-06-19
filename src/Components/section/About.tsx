@@ -107,39 +107,6 @@ const About = ({ theme }: AboutProps) => {
               {aboutData.callToAction.highlight}
             </p>
           </div>
-
-          {/* quick stat pills */}
-          <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
-            {[
-              { label: "Projects Built", value: "12+" },
-              { label: "Technologies", value: "15+" },
-              { label: "Experience", value: "2+ yr" },
-            ].map(({ label, value }) => (
-              <div
-                key={label}
-                className={cn(
-                  "rounded-xl px-4 py-3 text-center border transition-all duration-300",
-                  theme === "light"
-                    ? "bg-slate-100/80 border-slate-200/60"
-                    : "bg-slate-900/60 border-slate-800/40"
-                )}
-                style={{ minWidth: 90 }}
-              >
-                <p
-                  className="text-lg font-bold"
-                  style={{ color: "var(--color-primary)" }}
-                >
-                  {value}
-                </p>
-                <p
-                  className="text-xs"
-                  style={{ color: "var(--color-secondary)" }}
-                >
-                  {label}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </Container>
