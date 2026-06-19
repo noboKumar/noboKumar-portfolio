@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Space_Grotesk, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import BlobCursor from "../Components/UI/BlobCursor";
 import ScrollToTop from "../Components/UI/ScrollToTop";
@@ -13,6 +13,13 @@ const inter = Inter({
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const dmSerifDisplay = DM_Serif_Display({
+  variable: "--font-dm-serif-display",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
@@ -51,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${inter.variable} ${spaceGrotesk.variable} ${dmSerifDisplay.variable} antialiased`}>
         {/* <BlobCursor /> */}
         <Toaster position="top-center" />
         <ScrollToTop />

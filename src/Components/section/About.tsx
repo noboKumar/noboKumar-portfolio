@@ -18,7 +18,7 @@ const About = ({ theme }: AboutProps) => {
       <div className="mx-auto mt-12 flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-16">
         {/* Left — cartoon image */}
         <TiltedCard
-          imageSrc={(carttoonImg.src as any) || carttoonImg}
+          imageSrc={carttoonImg}
           altText="noboKumar"
           captionText="Full Stack Developer"
           containerHeight="500px"

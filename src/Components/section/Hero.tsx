@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../UI/Container";
+import Image from "next/image";
 import profileImg from "../../assets/profile-photo.jpg";
-import BlurText from "../UI/BlurText";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
@@ -39,13 +39,9 @@ const Hero = ({ theme }: HeroProps) => {
       <div className="w-full space-y-4 text-center lg:text-left">
         <div>
           <p className="text-lg">Hi, i am</p>
-          <BlurText
-            text={heroData.name}
-            delay={150}
-            animateBy="words"
-            direction="bottom"
-            className="heading-font text-6xl font-bold lg:text-7xl xl:text-8xl"
-          />
+          <h1 className="heading-font text-6xl font-bold lg:text-7xl xl:text-8xl">
+            {heroData.name}
+          </h1>
         </div>
         <p className="text-2xl">
           <Typewriter
@@ -146,10 +142,12 @@ const Hero = ({ theme }: HeroProps) => {
           }}
         >
           <div className="z-10 mx-auto w-[280px] md:w-[350px] max-w-full p-5">
-            <img
+            <Image
               className="h-auto w-full cursor-pointer rounded-full border-8 border-gray-100/10 object-top grayscale-10 filter"
-              src={(profileImg as any).src || profileImg}
+              src={profileImg}
               alt="Profile"
+              priority
+              placeholder="blur"
             />
           </div>
           <div className="absolute inset-0 z-0 animate-pulse rounded-full bg-gradient-to-br from-blue-400/20 to-purple-600/20 blur-xl" />
