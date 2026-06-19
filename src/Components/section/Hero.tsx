@@ -1,6 +1,6 @@
 import React from "react";
-import profileImg from "../../assets/profile-photo.jpg";
 import Container from "../UI/Container";
+import profileImg from "../../assets/profile-photo.jpg";
 import BlurText from "../UI/BlurText";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
