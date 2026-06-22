@@ -35,7 +35,7 @@ export default function BlobCursor() {
         className="pointer-events-none fixed top-0 left-0 z-[9990] -translate-x-1/2 -translate-y-1/2"
       >
         <div
-          className="h-[180px] w-[180px] rounded-full opacity-30 blur-[90px]"
+          className="h-[100px] w-[100px] rounded-full opacity-50 blur-[90px]"
           style={{
             background:
               "conic-gradient(from 0deg, var(--color-accent), var(--color-primary), var(--color-secondary), var(--color-accent))",
