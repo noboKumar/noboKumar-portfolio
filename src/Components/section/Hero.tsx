@@ -38,9 +38,9 @@ const Hero = ({ theme }: HeroProps) => {
     >
       <div className="w-full space-y-4 text-center lg:text-left">
         <div>
-          <p className="text-lg">Hi, i am</p>
+          <p className="text-lg">Hey, i am</p>
           <h1 className="heading-font text-6xl font-bold lg:text-7xl xl:text-8xl">
-            {heroData.name}
+            {heroData.name}<span className="hidden md:inline-block origin-[70%_70%] animate-wave">👋</span>
           </h1>
         </div>
         <p className="text-2xl">

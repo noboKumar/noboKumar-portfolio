@@ -1,12 +1,14 @@
 export const heroData = {
   name: "Nobo Kumar",
   roles: [
-    "Frontend Web Developer",
-    "React Developer",
-    "MERN Stack Developer",
     "Full Stack Developer",
-    "Web Developer",
-    "Tech Enthusiast",
+    "MERN Stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "Node.js Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "JavaScript Developer",
   ],
   description:
     "I specialize in creating performant, responsive, and maintainable web applications using Next.js, TypeScript, Tailwind CSS, Express.js, Prisma, and PostgreSQL. Let’s discuss your next project.",
