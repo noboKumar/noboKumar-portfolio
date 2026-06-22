@@ -61,7 +61,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${dmSerifDisplay.variable} antialiased`}
       >
-        {/* <BlobCursor /> */}
+        <BlobCursor />
         <Toaster position="top-center" />
         <ScrollToTop />
         {children}
