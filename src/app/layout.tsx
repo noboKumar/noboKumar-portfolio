@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, DM_Serif_Display } from "next/font/google";
+import {
+  Inter,
+  Josefin_Sans,
+  Space_Grotesk,
+  DM_Serif_Display,
+} from "next/font/google";
 import "./globals.css";
 import BlobCursor from "../Components/UI/BlobCursor";
 import ScrollToTop from "../Components/UI/ScrollToTop";
@@ -7,6 +12,12 @@ import { Toaster } from "../Components/UI/sonner";
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const josefinSans = Josefin_Sans({
+  variable: "--font-josefin-sans",
   subsets: ["latin"],
   display: "swap",
 });
@@ -59,7 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${dmSerifDisplay.variable} antialiased`}
+        className={`${inter.variable} ${josefinSans.variable} ${spaceGrotesk.variable} ${dmSerifDisplay.variable} antialiased`}
       >
         <BlobCursor />
         <Toaster position="top-center" />

@@ -107,6 +107,7 @@ const Hero = ({ theme }: HeroProps) => {
           </Link>
         </div>
       </div>
+      
       {/* avatar and icons */}
       <div className="relative flex h-[300px] w-[300px] items-center justify-center md:h-[400px] md:w-[400px]">
         {/* Orbital ring 1*/}
@@ -279,12 +280,6 @@ const Hero = ({ theme }: HeroProps) => {
           </div>
         </div>
 
-        <style>{`
-    @keyframes spin-outer {
-      from { transform: translate(-50%, -50%) rotate(0deg); }
-      to   { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-  `}</style>
       </div>
     </Container>
   );
