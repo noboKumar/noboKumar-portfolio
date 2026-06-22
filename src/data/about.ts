@@ -4,9 +4,9 @@ export const aboutData = {
     "Crafting digital experiences that bridge creativity and functionality",
   paragraphs: [
     {
-      text: "I'm a passionate Jr.full-stack web developer from Bangladesh, dedicated to creating seamless digital experiences that marry elegant design with robust functionality. My expertise spans the modern web development ecosystem, with deep proficiency in Next.js, TypeScript, Tailwind CSS, Express.js, Prisma, and PostgreSQL",
+      text: "I'm a passionate Full stack developer, dedicated to creating seamless digital experiences that marry elegant design with robust functionality. My expertise spans the modern web development ecosystem, with deep proficiency in Next.js, TypeScript, Tailwind CSS, Express.js, Prisma, and PostgreSQL",
       highlights: [
-        "Jr.full-stack web developer",
+        "Full stack developer",
         "React",
         "Tailwind CSS",
         "Node.js",
