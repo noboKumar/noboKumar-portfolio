@@ -25,7 +25,7 @@ const dmSerifDisplay = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Nobo Kumar — Full-Stack Developer",
+  title: "Nobo Kumar Portfolio",
   description:
     "Personal portfolio of Nobo Kumar, a Full-Stack Developer specializing in React.js, Next.js, TypeScript, Node.js and modern web technologies. Based in Khulna, Bangladesh.",
   keywords: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
   authors: [{ name: "Nobo Kumar" }],
   openGraph: {
-    title: "Nobo Kumar — Full-Stack Developer",
+    title: "Nobo Kumar Portfolio",
     description:
       "Personal portfolio of Nobo Kumar, a Full-Stack Developer specializing in React.js, Next.js, and TypeScript.",
     type: "website",
