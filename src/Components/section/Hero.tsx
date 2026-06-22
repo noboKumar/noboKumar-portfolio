@@ -85,7 +85,7 @@ const Hero = ({ theme }: HeroProps) => {
             isDynamic={true}
             activeClass="active"
           >
-            <button className="btn bg-primary text-base-100 cursor-pointer gap-2 rounded-3xl">
+            <button className="btn flex items-center gap-2 rounded-3xl border border-white/20 bg-white/10 px-6 py-3 shadow-md backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/20">
               <FiSend className="text-lg" />
               Let's Talk
             </button>
@@ -100,7 +100,7 @@ const Hero = ({ theme }: HeroProps) => {
             isDynamic={true}
             activeClass="active"
           >
-            <button className="btn text-primary border-primary cursor-pointer gap-2 rounded-3xl border-2">
+            <button className="btn border-base-300 bg-base-100/50 text-base-content hover:border-accent hover:bg-base-200 cursor-pointer gap-2 rounded-3xl border-2 shadow-md backdrop-blur-md transition-all duration-300 hover:scale-105">
               <BsFolder2Open className="text-lg" />
               View Projects
             </button>
