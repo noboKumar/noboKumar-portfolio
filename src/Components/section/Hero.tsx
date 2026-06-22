@@ -40,7 +40,10 @@ const Hero = ({ theme }: HeroProps) => {
         <div>
           <p className="text-lg">Hey, i am</p>
           <h1 className="heading-font text-6xl font-bold lg:text-7xl xl:text-8xl">
-            {heroData.name}<span className="hidden md:inline-block origin-[70%_70%] animate-wave">👋</span>
+            {heroData.name}
+            <span className="animate-wave hidden origin-[70%_70%] md:inline-block">
+              👋
+            </span>
           </h1>
         </div>
         <p className="text-2xl">
@@ -54,12 +57,12 @@ const Hero = ({ theme }: HeroProps) => {
             delaySpeed={1000}
           />
         </p>
-        <p className="px-5 md:px-0 text-lg md:w-2xl">{heroData.description}</p>
+        <p className="px-5 text-lg md:w-2xl md:px-0">{heroData.description}</p>
         <div
           onContextMenu={(e) => {
             e.stopPropagation();
           }}
-          className="flex items-center justify-center gap-10 py-4 text-4xl duration-300 md:w-fit lg:justify-start [&>*]:cursor-pointer [&>*]:hover:drop-shadow-[0_0_15px]"
+          className="flex items-center justify-center gap-10 py-4 text-4xl md:w-fit lg:justify-start [&>*]:cursor-pointer [&>*]:transition-transform [&>*]:duration-300 [&>*]:hover:scale-130 [&>*]:hover:drop-shadow-[0_0_15px]"
         >
           <a href={heroData.github} target="_blank" rel="noopener noreferrer">
             <FaGithub />
@@ -82,7 +85,7 @@ const Hero = ({ theme }: HeroProps) => {
             isDynamic={true}
             activeClass="active"
           >
-            <button className="btn bg-primary text-base-100 gap-2 rounded-3xl cursor-pointer">
+            <button className="btn bg-primary text-base-100 cursor-pointer gap-2 rounded-3xl">
               <FiSend className="text-lg" />
               Let's Talk
             </button>
@@ -97,7 +100,7 @@ const Hero = ({ theme }: HeroProps) => {
             isDynamic={true}
             activeClass="active"
           >
-            <button className="btn text-primary border-primary gap-2 rounded-3xl border-2 cursor-pointer">
+            <button className="btn text-primary border-primary cursor-pointer gap-2 rounded-3xl border-2">
               <BsFolder2Open className="text-lg" />
               View Projects
             </button>
@@ -105,7 +108,7 @@ const Hero = ({ theme }: HeroProps) => {
         </div>
       </div>
       {/* avatar and icons */}
-      <div className="relative flex h-[300px] w-[300px] md:h-[400px] md:w-[400px] items-center justify-center">
+      <div className="relative flex h-[300px] w-[300px] items-center justify-center md:h-[400px] md:w-[400px]">
         {/* Orbital ring 1*/}
         <div
           className="absolute hidden rounded-full md:block"
@@ -141,7 +144,7 @@ const Hero = ({ theme }: HeroProps) => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="z-10 mx-auto w-[280px] md:w-[350px] max-w-full p-5">
+          <div className="z-10 mx-auto w-[280px] max-w-full p-5 md:w-[350px]">
             <Image
               className="h-auto w-full cursor-pointer rounded-full border-8 border-gray-100/10 object-top grayscale-10 filter"
               src={profileImg}
@@ -216,10 +219,12 @@ const Hero = ({ theme }: HeroProps) => {
               animationDelay: "1.5s",
             }}
           >
-            <TbBrandNextjs className={cn(
-              "text-4xl drop-shadow-lg md:text-5xl",
-              theme === "light" ? "text-slate-950" : "text-white"
-            )} />
+            <TbBrandNextjs
+              className={cn(
+                "text-4xl drop-shadow-lg md:text-5xl",
+                theme === "light" ? "text-slate-950" : "text-white",
+              )}
+            />
           </div>
 
           {/* Express - Bottom center */}
@@ -233,10 +238,12 @@ const Hero = ({ theme }: HeroProps) => {
               animationDelay: "2s",
             }}
           >
-            <SiExpress className={cn(
-              "text-3xl drop-shadow-lg md:text-4xl",
-              theme === "light" ? "text-slate-950" : "text-gray-400"
-            )} />
+            <SiExpress
+              className={cn(
+                "text-3xl drop-shadow-lg md:text-4xl",
+                theme === "light" ? "text-slate-950" : "text-gray-400",
+              )}
+            />
           </div>
 
           {/* PostgreSQL - Bottom left */}
@@ -263,10 +270,12 @@ const Hero = ({ theme }: HeroProps) => {
               animationDelay: "1s",
             }}
           >
-            <SiPrisma className={cn(
-              "text-3xl drop-shadow-lg md:text-4xl",
-              theme === "light" ? "text-slate-950" : "text-white"
-            )} />
+            <SiPrisma
+              className={cn(
+                "text-3xl drop-shadow-lg md:text-4xl",
+                theme === "light" ? "text-slate-950" : "text-white",
+              )}
+            />
           </div>
         </div>
 
