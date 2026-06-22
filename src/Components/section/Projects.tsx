@@ -12,7 +12,7 @@ interface ProjectsProps {
 const Projects = ({ theme }: ProjectsProps) => {
   return (
     <Container id={"projects"} className="mt-10 mb-20">
-      <Heading text={"Projects"}></Heading>
+      <h1 className="text-4xl font-semibold text-center pt-20">Projects</h1>
       <ProjectCard projectData={projectData} theme={theme}></ProjectCard>
     </Container>
   );

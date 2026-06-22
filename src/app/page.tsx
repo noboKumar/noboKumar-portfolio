@@ -14,6 +14,7 @@ import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import ScrollDown from "../Components/UI/ScrollDown";
 
 export default function PortfolioPage() {
   const [theme, setTheme] = useState("dark");
@@ -100,15 +101,16 @@ export default function PortfolioPage() {
       <div className="relative z-10 flex min-h-screen w-full flex-col">
         <NavBar theme={theme} setTheme={setTheme} />
         <Hero theme={theme} />
+        <ScrollDown></ScrollDown>
         <div data-aos="fade-up">
           <About theme={theme} />
         </div>
         <div data-aos="fade-up">
           <Skills theme={theme} />
         </div>
-        <div data-aos="fade-up">
+        {/* <div data-aos="fade-up">
           <Education />
-        </div>
+        </div> */}
         <div data-aos="fade-up">
           <Projects theme={theme} />
         </div>
