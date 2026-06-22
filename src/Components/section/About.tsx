@@ -40,7 +40,6 @@ const About = ({ theme }: AboutProps) => {
           {/* subtitle */}
           <p
             className="text-xl leading-snug font-semibold"
-            style={{ color: "var(--color-primary)" }}
           >
             {aboutData.subtitle}
           </p>
@@ -51,7 +50,6 @@ const About = ({ theme }: AboutProps) => {
               <p
                 key={idx}
                 className="text-base leading-relaxed"
-                style={{ color: "var(--color-secondary)" }}
               >
                 {p.text
                   .split(new RegExp(`(${p.highlights.join("|")})`, "g"))
@@ -60,7 +58,6 @@ const About = ({ theme }: AboutProps) => {
                       <span
                         key={i}
                         className="font-semibold"
-                        style={{ color: "var(--color-primary)" }}
                       >
                         {part}
                       </span>
@@ -92,7 +89,6 @@ const About = ({ theme }: AboutProps) => {
           >
             <p
               className="text-base leading-relaxed"
-              style={{ color: "var(--color-secondary)" }}
             >
               {aboutData.callToAction.text}
             </p>
