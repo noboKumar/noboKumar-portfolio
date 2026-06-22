@@ -36,7 +36,7 @@ const Hero = ({ theme }: HeroProps) => {
       id={"hero"}
       className="my-20 flex flex-col-reverse items-center gap-10 lg:my-30 lg:flex-row"
     >
-      <div className="w-full space-y-4 text-center lg:text-left">
+      <div className="w-full space-y-5 text-center lg:text-left">
         <div>
           <p className="text-lg">Hey, i am</p>
           <h1 className="heading-font text-6xl font-bold lg:text-7xl xl:text-8xl">

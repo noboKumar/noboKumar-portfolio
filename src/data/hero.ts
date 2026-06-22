@@ -11,7 +11,7 @@ export const heroData = {
     "JavaScript Developer",
   ],
   description:
-    "I specialize in creating performant, responsive, and maintainable web applications using Next.js, TypeScript, Tailwind CSS, Express.js, Prisma, and PostgreSQL. Let’s discuss your next project.",
+    "🚀 Full-stack developer focused on building fast, scalable, and production-ready web applications with Next.js, TypeScript, and modern backend tools. Clean code, smooth UX, and real-world impact ⚡",
   github: "https://github.com/noboKumar",
   linkedin: "https://www.linkedin.com/in/nobo-kumar/",
   twitter: "https://x.com/noboKumar227",

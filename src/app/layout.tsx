@@ -58,7 +58,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} ${dmSerifDisplay.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${spaceGrotesk.variable} ${dmSerifDisplay.variable} antialiased`}
+      >
         {/* <BlobCursor /> */}
         <Toaster position="top-center" />
         <ScrollToTop />
