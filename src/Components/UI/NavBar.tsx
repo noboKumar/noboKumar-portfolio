@@ -64,7 +64,7 @@ const NavBar = ({ theme, setTheme }: NavBarProps) => {
           href={heroData.resume}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn bg-primary text-base-100 gap-2 rounded-3xl"
+          className="btn btn-primary text-base-100 gap-2 rounded-3xl"
         >
           <MdOutlineFileDownload size={20} />
           Resume

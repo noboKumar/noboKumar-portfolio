@@ -6,6 +6,7 @@
 }
 
 :root {
+  --base: #000000;
   --color-primary: #0f172a;
   --color-secondary: #475569;
   --color-accent: #4f46e5;
@@ -17,9 +18,11 @@
     background-color: #0f172a;
     color: #ffffff;
   }
+  
 }
 
 [data-theme="dark"] {
+  --base: #ffffff;
   --color-primary: #ffffff;
   --color-secondary: #cbd5e1;
   --color-accent: #818cf8;
@@ -52,8 +55,8 @@ html::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 html {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 @keyframes float {
@@ -65,7 +68,6 @@ html {
     transform: translateY(-10px);
   }
 }
-
 
 @theme {
   --animate-wave: wave 2s infinite;
