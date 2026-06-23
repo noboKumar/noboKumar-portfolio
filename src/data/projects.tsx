@@ -15,6 +15,7 @@ import {
   SiPostgresql,
   SiPrisma,
   SiAuth0,
+  SiSwiper,
 } from "react-icons/si";
 import { SiReactrouter } from "react-icons/si";
 import { FaStripe } from "react-icons/fa";
@@ -72,46 +73,44 @@ export const projectData: Project[] = [
     ],
   },
   {
-    title: "Garden Nest AI",
+    title: "Garden Nest",
     photo: gardenNestCover,
     description:
-      "Garden Nest AI is a full-stack gardening community platform powered by Generative AI. It connects plant enthusiasts, organic farmers, and urban gardeners to share gardening knowledge, discover expert tips, and engage with an intelligent gardening ecosystem. The platform features AI-powered content generation.",
+      "Garden Nest is a full-stack gardening community platform where users can share gardening tips, discover experienced gardeners, and engage with the gardening community. It features secure authentication, complete CRUD operations, dynamic content filtering, and a fully responsive user experience built with React and the MERN stack.",
+
     techStack: [
-      { name: "Next.js", icon: <SiNextdotjs className="text-base-content" /> },
-      { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
+      { name: "React", icon: <FaReact className="text-[#61DAFB]" /> },
       {
         name: "Tailwind CSS",
         icon: <RiTailwindCssFill className="text-[#38BDF8]" />,
       },
-      { name: "ShadCN UI", icon: <SiShadcnui className="text-base-content" /> },
-      { name: "Framer Motion", icon: <SiFramer className="text-[#F107A3]" /> },
+      { name: "DaisyUI", icon: <SiDaisyui className="text-[#5A0EF8]" /> },
       { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
       { name: "Express.js", icon: <SiExpress className="text-base-content" /> },
-      { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+      { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
       {
         name: "Firebase Auth",
-        icon: <SiFirebase className="text-yellow-500" />,
+        icon: <SiFirebase className="text-[#FFCA28]" />,
       },
       {
-        name: "Google Gemini AI",
-        icon: <SiGooglegemini className="text-[#1a73e8]" />,
+        name: "React Router",
+        icon: <SiReactrouter className="text-[#CA4245]" />,
       },
+      { name: "Swiper.js", icon: <SiSwiper className="text-[#6332F6]" /> },
     ],
+
     links: [
       {
-        live: "https://garden-nest-ai.vercel.app",
-        githubRepo: "https://github.com/your-github-username/garden-nest-ai",
+        live: "https://garden-nest.netlify.app",
+        githubRepo: "https://github.com/noboKumar/Garden-Nest-Client",
       },
     ],
+
     features: [
-      "AI-powered GardenSage chatbot for instant gardening assistance",
-      "Generate and refine gardening posts using Google Gemini AI",
-      "Role-based dashboards for Visitors, Gardeners, and Admins",
-      "Interactive analytics and charts with Recharts",
-      "Advanced search, filtering, and sorting system",
-      "Responsive premium UI with dark/light mode support",
-      "Authentication with Firebase (Google & Email/Password)",
-      "Smooth animations and modern glassmorphism design",
+      "Built a full-stack gardening community platform with complete CRUD functionality for creating, updating, and managing gardening tips.",
+      "Implemented Firebase authentication with Email/Password and Google Sign-In, protected routes, and personalized user experiences.",
+      "Developed dynamic features including active gardener profiles, difficulty-based filtering, trending tips through a like system, and responsive Swiper-powered event banners.",
+      "Designed a fully responsive interface with dark/light mode and integrated MongoDB-backed REST APIs for seamless data management.",
     ],
   },
   {
