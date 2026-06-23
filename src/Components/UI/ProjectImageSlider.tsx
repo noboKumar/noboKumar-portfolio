@@ -2,13 +2,13 @@
 
 import React from "react";
 import { Lock } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface ProjectImageSliderProps {
   photos?: string[];
   photoLabels?: string[];
   title: string;
-  fallbackPhoto: string;
+  fallbackPhoto: StaticImageData;
   liveUrl?: string;
 }
 

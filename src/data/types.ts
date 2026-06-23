@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { JSX } from "react";
 
 export interface TechItem {
@@ -13,7 +14,7 @@ export interface ProjectLink {
 
 export interface Project {
   title: string;
-  photo: string;
+  photo: StaticImageData;
   photos?: string[];
   photoLabels?: string[];
   description: string;

@@ -1,29 +1,46 @@
 import React from "react";
 import { FaReact, FaKey } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiDaisyui, SiFirebase, SiMongodb, SiExpress, SiNextdotjs, SiTypescript, SiShadcnui, SiFramer, SiNodedotjs, SiGooglegemini, SiPostgresql, SiPrisma, SiAuth0 } from "react-icons/si";
+import {
+  SiDaisyui,
+  SiFirebase,
+  SiMongodb,
+  SiExpress,
+  SiNextdotjs,
+  SiTypescript,
+  SiShadcnui,
+  SiFramer,
+  SiNodedotjs,
+  SiGooglegemini,
+  SiPostgresql,
+  SiPrisma,
+  SiAuth0,
+} from "react-icons/si";
 import { SiReactrouter } from "react-icons/si";
 import { FaStripe } from "react-icons/fa";
 import { SiBetterauth } from "react-icons/si";
 import { SiAxios, SiReactquery, SiReacthookform } from "react-icons/si";
 import { Project } from "./types";
 
+import skillBridgeCover from "../assets/project-cover/skillBridge.jpg";
+import gardenNestCover from "../assets/project-cover/gardenNest.jpg";
+import devShowCaseCover from "../assets/project-cover/devShowCase.jpg";
+import skillSparkCover from "../assets/project-cover/skillspark.jpg";
+import travoaCover from "../assets/project-cover/Travoa.jpg";
+
 export const projectData: Project[] = [
   {
     title: "SkillBridge",
-    photo: "https://i.ibb.co/8Lv128c7/6cc0460f-2b1d-4c68-b80c-29a1e2c817fe.png",
-    photos: [
-      "https://i.ibb.co/8Lv128c7/6cc0460f-2b1d-4c68-b80c-29a1e2c817fe.png",
-      "https://i.ibb.co/dJMwbfSM/891f1e8d-d108-4c67-a0eb-5b03508a3242.png",
-      "https://i.ibb.co/JW8y8bg7/1c243335-e9ab-4d2e-91ac-369fddbd4f86.png"
-    ],
-    photoLabels: ["Home", "Teachers", "Admin Dashboard"],
+    photo: skillBridgeCover,
     description:
       "SkillBridge is a premium full-stack tutoring platform that connects students with expert tutors for personalized 1-on-1 learning sessions. The platform provides role-based experiences for Students, Tutors, and Admins, featuring secure Stripe payments, smart tutor discovery, session booking, analytics dashboards, and a modern responsive UI built with Next.js and TypeScript.",
     techStack: [
       { name: "Next.js", icon: <SiNextdotjs className="text-base-content" /> },
       { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
-      { name: "Tailwind CSS", icon: <RiTailwindCssFill className="text-[#38BDF8]" /> },
+      {
+        name: "Tailwind CSS",
+        icon: <RiTailwindCssFill className="text-[#38BDF8]" />,
+      },
       { name: "shadcn/ui", icon: <SiShadcnui className="text-base-content" /> },
       { name: "Framer Motion", icon: <SiFramer className="text-[#F107A3]" /> },
       { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
@@ -32,7 +49,10 @@ export const projectData: Project[] = [
       { name: "Prisma ORM", icon: <SiPrisma className="text-[#5a67d8]" /> },
       { name: "JWT Auth", icon: <FaKey className="text-[#d97706]" /> },
       { name: "Stripe", icon: <FaStripe className="text-[#635BFF]" /> },
-      { name: "TanStack Query", icon: <SiReactquery className="text-[#FF4154]" /> },
+      {
+        name: "TanStack Query",
+        icon: <SiReactquery className="text-[#FF4154]" />,
+      },
     ],
     links: [
       {
@@ -53,26 +73,29 @@ export const projectData: Project[] = [
   },
   {
     title: "Garden Nest AI",
-    photo: "https://i.ibb.co/VYf9Rdbs/a43aa612-a11f-4ab2-a090-08d3f8a00a4d.png",
-    photos: [
-      "https://i.ibb.co/VYf9Rdbs/a43aa612-a11f-4ab2-a090-08d3f8a00a4d.png",
-      "https://i.ibb.co/PvgsMzMh/20d05239-53d1-4cc5-ad44-ef10e002a4c4.png",
-      "https://i.ibb.co/Z1BHRPD1/a9ed460e-c1b8-4c7b-b307-7cda23887c48.png"
-    ],
-    photoLabels: ["Home", "Explore Tips", "Admin Dashboard"],
+    photo: gardenNestCover,
     description:
       "Garden Nest AI is a full-stack gardening community platform powered by Generative AI. It connects plant enthusiasts, organic farmers, and urban gardeners to share gardening knowledge, discover expert tips, and engage with an intelligent gardening ecosystem. The platform features AI-powered content generation.",
     techStack: [
       { name: "Next.js", icon: <SiNextdotjs className="text-base-content" /> },
       { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
-      { name: "Tailwind CSS", icon: <RiTailwindCssFill className="text-[#38BDF8]" /> },
+      {
+        name: "Tailwind CSS",
+        icon: <RiTailwindCssFill className="text-[#38BDF8]" />,
+      },
       { name: "ShadCN UI", icon: <SiShadcnui className="text-base-content" /> },
       { name: "Framer Motion", icon: <SiFramer className="text-[#F107A3]" /> },
       { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
       { name: "Express.js", icon: <SiExpress className="text-base-content" /> },
       { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-      { name: "Firebase Auth", icon: <SiFirebase className="text-yellow-500" /> },
-      { name: "Google Gemini AI", icon: <SiGooglegemini className="text-[#1a73e8]" /> },
+      {
+        name: "Firebase Auth",
+        icon: <SiFirebase className="text-yellow-500" />,
+      },
+      {
+        name: "Google Gemini AI",
+        icon: <SiGooglegemini className="text-[#1a73e8]" />,
+      },
     ],
     links: [
       {
@@ -93,13 +116,7 @@ export const projectData: Project[] = [
   },
   {
     title: "DevShowcase - Developer Project Showcase Platform",
-    photo: "https://i.ibb.co/zTrwrGnF/2925f1a9-87cb-4cf6-8450-0417e7f318ac.png",
-    photos: [
-      "https://i.ibb.co/zTrwrGnF/2925f1a9-87cb-4cf6-8450-0417e7f318ac.png",
-      "https://i.ibb.co/TM80dbK8/25f2999b-dfb4-4eeb-a69c-616c6c199428.png",
-      "https://i.ibb.co/tMrFTMJY/e30fb160-e083-4b75-a228-f279f2a2c885.png"
-    ],
-    photoLabels: ["Home", "Project Details", "About"],
+    photo: devShowCaseCover,
     description:
       "DevShowcase is a modern developer project showcase platform built with Next.js App Router and TypeScript. It enables developers to professionally present their projects, explore community submissions, and manage project listings through a clean, responsive, and user-friendly interface.",
     techStack: [
@@ -146,13 +163,7 @@ export const projectData: Project[] = [
   },
   {
     title: "Skill Spark",
-    photo: "https://i.ibb.co/yFG2nWs5/skill-spark-ss.png",
-    photos: [
-      "https://i.ibb.co/yFG2nWs5/skill-spark-ss.png",
-      "https://i.ibb.co/5hj5Ytr5/53e096db-d1dc-415d-8d13-d00aa215b541.png",
-      "https://i.ibb.co/vvvYMct6/8f4ca55f-a235-4869-8531-9cab079aaa40.png"
-    ],
-    photoLabels: ["Home", "All Classes", "Admin Dashboard"],
+    photo: skillSparkCover,
     description:
       "Skill Spark is a modern, full-featured e-learning platform built with the MERN stack. It empowers educational institutions through role-based Dashboards designed specifically for students, teachers, and admins. With Stripe-integrated payments, real-time feedback, class management tools, and a fully responsive design.",
     techStack: [
@@ -201,13 +212,7 @@ export const projectData: Project[] = [
   },
   {
     title: "TraVoa - Hotel Booking Platform",
-    photo: "https://i.ibb.co/Gvnh3Cyk/Travoa-Page-1.png",
-    photos: [
-      "https://i.ibb.co/yjqTn4C/7941146b-be0f-49da-9f67-52b458b04d96.png",
-      "https://i.ibb.co/QFHWn8Xr/1d1e7363-b8a2-43b5-af78-2f5a000db008.png",
-      "https://i.ibb.co/KjvCbNB9/a6c33f44-3f4f-406d-b175-64617da17309.png"
-    ],
-    photoLabels: ["Home", "Rooms", "Rooms Details"],
+    photo: travoaCover,
     description:
       "TraVoa is a modern, full-featured Hotel Booking Platform built using the MERN stack with secure authentication and dynamic features. It offers users a seamless experience for discovering and booking hotel rooms, submitting reviews, and managing their bookings. The platform is mobile-responsive, secure.",
     techStack: [
@@ -244,5 +249,4 @@ export const projectData: Project[] = [
       "Custom 404 with Lottie react and redirect button",
     ],
   },
-
 ];
