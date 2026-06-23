@@ -5,6 +5,7 @@ import { IoIosLink } from "react-icons/io";
 import { BsThreeDots } from "react-icons/bs";
 import Modal from "./Modal";
 import ProjectImageSlider from "./ProjectImageSlider";
+import { Dialog, DialogTrigger } from "./dialog";
 import { Project } from "../../data/types";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
@@ -101,22 +102,20 @@ const Card = ({
                   >
                     <FaGithub size={20} /> GitHub
                   </a>
-                  <button
-                    className={`btn btn-outline ${theme === "light" ? "border-slate-300/80" : "border-gray-500/80"}`}
-                    onClick={() => {
-                      const modal = document.getElementById(
-                        `my_modal_${idx}`,
-                      ) as HTMLDialogElement | null;
-                      modal?.showModal();
-                    }}
-                  >
-                    <BsThreeDots size={20} />
-                  </button>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button
+                        className={`btn btn-outline ${theme === "light" ? "border-slate-300/80" : "border-gray-500/80"}`}
+                      >
+                        <BsThreeDots size={20} />
+                      </button>
+                    </DialogTrigger>
+                    <Modal project={project} />
+                  </Dialog>
                 </div>
               ))}
             </div>
           </div>
-          <Modal id={`my_modal_${idx}`} project={project} />
         </SpotlightCard>
       </motion.div>
     </div>
