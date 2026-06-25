@@ -88,7 +88,7 @@ const SendEmail = () => {
       <button
         type="submit"
         disabled={loading}
-        className="btn btn-primary mt-2 w-full disabled:opacity-60"
+        className="btn btn-primary mt-2 w-full disabled:opacity-60 rounded-2xl"
       >
         {loading ? "Sending..." : "Send Message"}
       </button>

@@ -30,7 +30,7 @@ export const contactDetails = [
   },
   {
     icon: <FaMapMarkerAlt className="text-primary text-xl" />,
-    info: "Khulna, Bangladesh",
+    info: "Dhaka, Bangladesh",
     href: "https://www.google.com/maps/place/Khulna,+Bangladesh",
   },
 ];
