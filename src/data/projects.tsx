@@ -73,7 +73,7 @@ export const projectData: Project[] = [
     ],
   },
   {
-    title: "Garden Nest - The Social Network for Gardeners",
+    title: "Garden Nest - A Social Platform For Gardeners",
     photo: gardenNestCover,
     description:
       "Garden Nest is a full-stack gardening community platform for sharing tips, discovering experienced gardeners, and connecting with enthusiasts. Built with the MERN stack, it includes secure authentication, CRUD operations, content filtering, and a responsive design.",
@@ -161,7 +161,7 @@ export const projectData: Project[] = [
     ],
   },
   {
-    title: "Skill Spark - an online learning platform",
+    title: "Skill Spark - An Online Learning Platform",
     photo: skillSparkCover,
     description:
       "Skill Spark is a modern, full-featured e-learning platform built with the MERN stack. It empowers educational institutions through role-based Dashboards designed specifically for students, teachers, and admins. With Stripe-integrated payments, real-time feedback, class management tools, and a fully responsive design.",
