@@ -31,10 +31,10 @@ import travoaCover from "../assets/project-cover/Travoa.jpg";
 
 export const projectData: Project[] = [
   {
-    title: "SkillBridge",
+    title: "SkillBridge - Personalized Tutoring Marketplace",
     photo: skillBridgeCover,
     description:
-      "SkillBridge is a premium full-stack tutoring platform that connects students with expert tutors for personalized 1-on-1 learning sessions. The platform provides role-based experiences for Students, Tutors, and Admins, featuring secure Stripe payments, smart tutor discovery, session booking, analytics dashboards, and a modern responsive UI built with Next.js and TypeScript.",
+      "SkillBridge is a full-stack tutoring platform that connects students with expert tutors for personalized 1-on-1 learning. It features role-based dashboards, secure Stripe payments, tutor discovery, session booking, and a modern responsive UI built with Next.js and TypeScript.",
     techStack: [
       { name: "Next.js", icon: <SiNextdotjs className="text-base-content" /> },
       { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
@@ -73,10 +73,10 @@ export const projectData: Project[] = [
     ],
   },
   {
-    title: "Garden Nest",
+    title: "Garden Nest - The Social Network for Gardeners",
     photo: gardenNestCover,
     description:
-      "Garden Nest is a full-stack gardening community platform where users can share gardening tips, discover experienced gardeners, and engage with the gardening community. It features secure authentication, complete CRUD operations, dynamic content filtering, and a fully responsive user experience built with React and the MERN stack.",
+      "Garden Nest is a full-stack gardening community platform for sharing tips, discovering experienced gardeners, and connecting with enthusiasts. Built with the MERN stack, it includes secure authentication, CRUD operations, content filtering, and a responsive design.",
 
     techStack: [
       { name: "React", icon: <FaReact className="text-[#61DAFB]" /> },
@@ -161,7 +161,7 @@ export const projectData: Project[] = [
     ],
   },
   {
-    title: "Skill Spark",
+    title: "Skill Spark - an online learning platform",
     photo: skillSparkCover,
     description:
       "Skill Spark is a modern, full-featured e-learning platform built with the MERN stack. It empowers educational institutions through role-based Dashboards designed specifically for students, teachers, and admins. With Stripe-integrated payments, real-time feedback, class management tools, and a fully responsive design.",
